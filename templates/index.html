@@ -1,0 +1,181 @@
+{% include "header.html" %}
+            <!-- HEADER -->
+            <header class="py-5">
+                <div class="container py-5 px-5 pb-5 mt-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-xxl-5">
+                            <!-- Header text content-->
+                            <div class="text-center text-xxl-start">
+                                <div class="badge bg-gradient-primary-to-secondary text-white mb-1"><div class="text-uppercase">Backend &middot; Data Analysis &middot; UI</div></div>
+                                <div class="fs-3 fw-light text-muted">Junior Python Developer</div>
+                                <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Hi, I'm Egor. I write back-end, analyse data, crate UI.</span></h1>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
+                                    <a class="btn btn-primary  btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="{{ url_for('resume') }}">Resume</a>
+                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="{{ url_for('projects') }}">Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-7">
+                            <!-- Header profile picture-->
+                            <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+                                <div class="profile">
+                                    <img class="profile-img" src="static/assets/profile.png" alt="..." />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ABOUT -->
+            <section class="bg-blue py-4">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xxl-8">
+                            <div class="text-center my-5">
+                                <h2 class="display-4 fw-bolder my-5"><span class="text-white d-inline">About Me</span></h2>
+                                <p class="lead text-white mb-4 about-me-text">My name is Egor Barinov, I'm 22 years old.</p>
+                                <p class="lead text-white about-me-text">I'm Junior Python Developer based in the United States. My journey in the world of coding started with an interest for automation and problem-solving, and it has evolved into a love for crafting efficient and scalable backend solutions.</p>
+                                <div class="d-flex justify-content-center fs-2 gap-4">
+                                    <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
+                                    <a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>
+                                    <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section class="bg-blue colored-section mb-5">
+                <div class="container my-5">
+                    <div class="box">
+                        <div class="row">
+                          <div class="col-md-4 column text-center">
+                              <div class="mb-5">
+                                  <img class="icon-img" src="./static/assets/backend.png">
+                                  <h2 class="py-3">Backend</h2>
+                                  <p>My passion lies in crafting the server-side and database magic that powers web applications.</p>
+                              </div>
+                            <div class="text-skills-margin mb-5">
+                                <p class="text-skills py-2">Things I work on:</p>
+                                <p>Server-side logic</p>
+                                <p>Database design and management</p>
+                                <p>API development</p>
+                                <p>System architecture</p>
+                            </div>
+                            <div class="text-skills-margin">
+                                <p class="text-skills py-2">Tech Stack:</p>
+                                <p>Python</p>
+                                <p>Flask</p>
+                                <p>Django</p>
+                                <p>SQL</p>
+                                <p>Docker</p>
+                            </div>
+                          </div>
+                          <div class="col-md-4 column text-center">
+                              <div class="mb-5">
+                                <img class="icon-img" src="./static/assets/da.png">
+                                <h2 class="py-3">Data Analysis</h2>
+                                <p>I dive into data, extracting meaningful insights and trends to inform decision-making. </p>
+                              </div>
+                            <div class="text-skills-margin mb-5">
+                                <p class="text-skills py-2">Things I handle:</p>
+                                <p>Data cleaning and preprocessing</p>
+                                <p>Statistical analysis</p>
+                                <p>Data visualization</p>
+                                <p>Machine learning basics</p>
+                            </div>
+                            <div class="text-skills-margin">
+                                <p class="text-skills py-2">Tech Stack:</p>
+                                <p>Python</p>
+                                <p>Pandas</p>
+                                <p>NumPy</p>
+                                <p>Matplotlib</p>
+                                <p>Jupyter Notebooks</p>
+                            </div>
+                          </div>
+                          <div class="col-md-4 column no-right-border text-center">
+                              <div class="mb-5">
+                                <img class="icon-img" src="./static/assets/UI.png">
+                                <h2 class="py-3">Frontend</h2>
+                                <p>While my primary expertise lies in backend dev, I handle front-end tasks when needed.</p>
+                              </div>
+                            <div class="text-skills-margin mb-5">
+                                <p class="text-skills py-2">Things I create:</p>
+                                <p>Simple web design</p>
+                                <p>User interface (UI) design</p>
+                                <p>User experience (UX) enhancement</p>
+                                <p>Logos and branding</p>
+                            </div>
+                            <div class="text-skills-margin">
+                                <p class="text-skills py-2">Tech Stack:</p>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>Bootstrap</p>
+                                <p>Photoshop</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PORTFOLIO -->
+            <section>
+                <h2 class="display-5 fw-bolder my-5 mb-5 content-center"><span class="text-black d-inline">Portfolio</span></h2>
+                <h5 class="my-5 mb-5 contact-text content-center"><span class="text-black">Here are few projects I've worked on. See more on my&nbsp;</span><a href="#">GitHub</a>.</h5>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <!-- Portfolio Item 1-->
+                        <div class="col-md-6 col-lg-4 mb-5 content-center">
+                            <a class="btn portfolio-btn btn-outline-light box" href="#!" target="_blank">
+                                <div class="row mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 146" id="github"><path d="M7.999 0C3.582 0 0 3.596 0 8.032a8.031 8.031 0 0 0 5.472 7.621c.4.074.546-.174.546-.387 0-.191-.007-.696-.011-1.366-2.225.485-2.695-1.077-2.695-1.077-.363-.928-.888-1.175-.888-1.175-.727-.498.054-.488.054-.488.803.057 1.225.828 1.225.828.714 1.227 1.873.873 2.329.667.072-.519.279-.873.508-1.074-1.776-.203-3.644-.892-3.644-3.969 0-.877.312-1.594.824-2.156-.083-.203-.357-1.02.078-2.125 0 0 .672-.216 2.2.823a7.633 7.633 0 0 1 2.003-.27 7.65 7.65 0 0 1 2.003.271c1.527-1.039 2.198-.823 2.198-.823.436 1.106.162 1.922.08 2.125.513.562.822 1.279.822 2.156 0 3.085-1.87 3.764-3.652 3.963.287.248.543.738.543 1.487 0 1.074-.01 1.94-.01 2.203 0 .215.144.465.55.386A8.032 8.032 0 0 0 16 8.032C16 3.596 12.418 0 7.999 0z"></path></svg>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Portfolio Item 2-->
+                        <div class="col-md-6 col-lg-4 mb-5 content-center">
+                            <a class="btn portfolio-btn btn-outline-light box" href="#!" target="_blank">
+                                <div class="row mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 146" id="github"><path d="M7.999 0C3.582 0 0 3.596 0 8.032a8.031 8.031 0 0 0 5.472 7.621c.4.074.546-.174.546-.387 0-.191-.007-.696-.011-1.366-2.225.485-2.695-1.077-2.695-1.077-.363-.928-.888-1.175-.888-1.175-.727-.498.054-.488.054-.488.803.057 1.225.828 1.225.828.714 1.227 1.873.873 2.329.667.072-.519.279-.873.508-1.074-1.776-.203-3.644-.892-3.644-3.969 0-.877.312-1.594.824-2.156-.083-.203-.357-1.02.078-2.125 0 0 .672-.216 2.2.823a7.633 7.633 0 0 1 2.003-.27 7.65 7.65 0 0 1 2.003.271c1.527-1.039 2.198-.823 2.198-.823.436 1.106.162 1.922.08 2.125.513.562.822 1.279.822 2.156 0 3.085-1.87 3.764-3.652 3.963.287.248.543.738.543 1.487 0 1.074-.01 1.94-.01 2.203 0 .215.144.465.55.386A8.032 8.032 0 0 0 16 8.032C16 3.596 12.418 0 7.999 0z"></path></svg>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Portfolio Item 3-->
+                        <div class="col-md-6 col-lg-4 mb-5 content-center">
+                            <a class="btn portfolio-btn btn-outline-light box" href="#!" target="_blank">
+                                <div class="row mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 146" id="github"><path d="M7.999 0C3.582 0 0 3.596 0 8.032a8.031 8.031 0 0 0 5.472 7.621c.4.074.546-.174.546-.387 0-.191-.007-.696-.011-1.366-2.225.485-2.695-1.077-2.695-1.077-.363-.928-.888-1.175-.888-1.175-.727-.498.054-.488.054-.488.803.057 1.225.828 1.225.828.714 1.227 1.873.873 2.329.667.072-.519.279-.873.508-1.074-1.776-.203-3.644-.892-3.644-3.969 0-.877.312-1.594.824-2.156-.083-.203-.357-1.02.078-2.125 0 0 .672-.216 2.2.823a7.633 7.633 0 0 1 2.003-.27 7.65 7.65 0 0 1 2.003.271c1.527-1.039 2.198-.823 2.198-.823.436 1.106.162 1.922.08 2.125.513.562.822 1.279.822 2.156 0 3.085-1.87 3.764-3.652 3.963.287.248.543.738.543 1.487 0 1.074-.01 1.94-.01 2.203 0 .215.144.465.55.386A8.032 8.032 0 0 0 16 8.032C16 3.596 12.418 0 7.999 0z"></path></svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT BUTTON -->
+            <section class="colored-footer">
+                <div class="container">
+                    <div class="box bg-light-blue my-3">
+                        <div class="row level-item">
+                            <div class="box-column text-white text-center">
+                                <h4>Contact Me</h4>
+                            </div>
+                            <div class="box-column text-white text-center contact-text">
+                                <p>Interested in working together? We should get some coffee and chat. I'm paying!.</p>
+                            </div>
+                            <div class="box-column text-center">
+                                <a class="btn btn-outline-light btn-rounded px-5 py-3 fs-7 " href="#!" target="_blank">
+                                    Let's chat!
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+</main>
+
+{% include "footer.html" %}
