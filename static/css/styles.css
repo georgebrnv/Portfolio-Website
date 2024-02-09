@@ -11750,6 +11750,7 @@ body { --bs-body-font-family: 'Rubik'; }
 .contact-text {
     font-weight: 400 !important;
     margin-top: 13px !important;
+    text-align: center;
 }
 
 .portfolio-btn {
@@ -11762,4 +11763,89 @@ body { --bs-body-font-family: 'Rubik'; }
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.svg-size {
+    width: 30px;
+    height: 30px;
+}
+
+.git-text {
+    font-weight: 500 !important;
+    color: black;
+}
+
+@media (min-width: 576px) {
+  .git-text-pos {
+
+  }
+}
+@media (min-width: 768px) {
+  .git-text-pos {
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .git-text-pos {
+    margin-top: 5px;
+    margin-left: 21px;
+  }
+}
+@media (min-width: 1200px) {
+  .git-text-pos {
+    margin-top: 5px;
+    margin-left: 13px;
+  }
+}
+
+.git-project-text {
+    color: #5588ff;
+    font-weight: 500 !important;
+}
+
+@media (min-width: 576px) {
+  .git-project-text-pos {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .git-project-text-pos {
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .git-project-text-pos {
+    margin-top: 5px;
+    margin-left: 21px;
+  }
+}
+@media (min-width: 1200px) {
+  .git-project-text-pos {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.rounded-text {
+    border-radius: 9999px;
+    font-size: 12px;
+    background-color: gray;
+    padding: 3px;
+}
+
+.git-des-text {
+    font-size: 13px;
+    color: #65737e;
+}
+
+.git-lang-text {
+    font-size: 15px;
+    color: #65737e;
 }
