@@ -11673,20 +11673,16 @@ html {
     overflow: hidden;
 }
 
-@media (min-width: 576px) {
-  .column {
+.column {
     border-bottom: 0px solid #5588ff;
     border-right: 1px solid #5588ff;
     padding: 60px 35px;
-    border-right: unset;
-    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) and (max-width: 768px) {
   .column {
-    border-bottom: 0px solid #5588ff;
-    border-right: 1px solid #5588ff;
-    padding: 60px 35px;
+  border-right: unset;
+  }
 }
 
 .no-right-border {
@@ -11812,6 +11808,8 @@ body { --bs-body-font-family: 'Rubik'; }
 .git-project-text {
     color: #5588ff;
     font-weight: 500 !important;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 @media (min-width: 576px) {

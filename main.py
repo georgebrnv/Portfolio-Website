@@ -24,7 +24,6 @@ def home():
     git_response = requests.get(url=URL)
     data = git_response.json()
     sorted_data = sorted(data, key=lambda x: x["updated_at"], reverse=True)[:6]
-    print(sorted_data)
 
     return render_template('index.html', git_projects_data=sorted_data)
 
@@ -32,11 +31,6 @@ def home():
 @app.route('/resume', methods=['GET', 'POST'])
 def resume():
     return render_template('resume.html')
-
-
-@app.route('/projects', methods=['GET', 'POST'])
-def projects():
-    return render_template('projects.html')
 
 
 @app.route('/contact', methods=['GET', 'POST'])
