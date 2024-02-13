@@ -6,6 +6,8 @@ from wtforms.validators import DataRequired, URL, Email, ValidationError
 def name_validation(form, field):
     if len(field.data) > 50:
         raise ValidationError('Name must be less than 50 characters.')
+    elif len(field.data) < 2:
+        raise ValidationError('Name is too short.')
 
 
 def email_validation(form, field):

@@ -3,15 +3,26 @@ from flask_bootstrap import Bootstrap5
 from datetime import datetime
 import requests
 from contact_form import ContactForm
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
+import os
 
 # Git REST API setup
 GIT_USER = 'georgebrnv'
 URL = f'https://api.github.com/users/{GIT_USER}/repos'
 
-
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "egor.barinov123"
+app.config['SECRET_KEY'] = os.getenv('FLASK_APP_KEY')
 Bootstrap5(app)
+
+# SMTPLIB email
+MY_EMAIL = "egor.barinov.us@gmail.com"
+GMAIL_APP_PASSWORD = os.getenv('GMAIL_APP_PASS')
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 # Pass current_year variable to all HTML templates
@@ -60,7 +71,28 @@ def flash_errors(form):
 
 
 def sent_email_message(name, email, message):
-    print(name, email, message)
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(user=MY_EMAIL, password=GMAIL_APP_PASSWORD)
+        html = f"""\
+                    <html>
+                    <head></head>
+                    <body>
+                    <h2 style="font-weight: bold;">Portfolio Website Contact Form</h2>
+                    <p style="font-size: 20px"><strong>PROVIDED EMAIL:</strong> {email}</p>
+                    <p style="font-size: 20px"><strong>PROVIDED NAME:</strong> {name}</p>
+                    </body>
+                    </html>
+                    """
+        text = message
+        message = MIMEMultipart()
+        message['Subject'] = 'Portfolio Website Contact Form'
+        message['From'] = MY_EMAIL
+        message['To'] = MY_EMAIL
+        message.attach(MIMEText(html, 'html'))
+        message.attach(MIMEText(text, 'plain'))
+
+        connection.sendmail(from_addr=MY_EMAIL, to_addrs=MY_EMAIL, msg=message.as_string())
 
 
 if __name__ == '__main__':

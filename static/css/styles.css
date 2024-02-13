@@ -11857,3 +11857,7 @@ body { --bs-body-font-family: 'Rubik'; }
     font-size: 15px;
     color: #65737e;
 }
+
+.message-text {
+    white-space: pre-line;
+}
