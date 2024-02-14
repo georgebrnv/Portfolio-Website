@@ -9,20 +9,20 @@ from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 import os
 
+# Load environment variables from .env file
+load_dotenv()
+
 # Git REST API setup
 GIT_USER = 'georgebrnv'
 URL = f'https://api.github.com/users/{GIT_USER}/repos'
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('FLASK_APP_KEY')
+app.config['SECRET_KEY'] = os.environ.get('FLASK_APP_KEY')
 Bootstrap5(app)
 
 # SMTPLIB email
 MY_EMAIL = "egor.barinov.us@gmail.com"
-GMAIL_APP_PASSWORD = os.getenv('GMAIL_APP_PASS')
-
-# Load environment variables from .env file
-load_dotenv()
+GMAIL_APP_PASSWORD = os.environ.get('GMAIL_APP_PASS')
 
 
 # Pass current_year variable to all HTML templates
