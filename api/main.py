@@ -1,8 +1,8 @@
-from flask import Flask, abort, render_template, redirect, url_for, flash, request
+from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_bootstrap import Bootstrap5
 from datetime import datetime
 import requests
-from contact_form import ContactForm
+from api.templates.contact_form import ContactForm
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
