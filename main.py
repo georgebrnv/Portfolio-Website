@@ -62,20 +62,19 @@ def contact():
                         <h2 style="font-weight: bold;">Portfolio Website Contact Form</h2>
                         <p style="font-size: 20px"><strong>PROVIDED EMAIL:</strong> {email}</p>
                         <p style="font-size: 20px"><strong>PROVIDED NAME:</strong> {name}</p>
+                        <div style="white-space: pre-line;">
+                            {message}
+                        </div>
                         </body>
                         </html>
                     """
-            text = message
             message_mime = MIMEMultipart()
             message_mime['Subject'] = 'Portfolio Website Contact Form'
             message_mime['From'] = MY_EMAIL
             message_mime['To'] = MY_EMAIL
             message_mime.attach(MIMEText(html, 'html'))
-            message_mime.attach(MIMEText(text, 'plain'))
             # Sent email
             sent_email_message(message=message_mime)
-            # Flash success message
-            flash('Message was successfully sent.', 'success')
             return redirect(url_for('contact'))
         else:
             # Flash error messages from form errors dictionary
@@ -91,13 +90,13 @@ def flash_errors(form):
 
 def sent_email_message(message):
     try:
-        with smtplib.SMTP("smtp.gmail.com") as connection:
+        with smtplib.SMTP("sandbox.smtp.mailtrap.io", 2525) as connection:
             connection.starttls()
-            connection.login(user=MY_EMAIL, password=GMAIL_APP_PASSWORD)
-            connection.sendmail(from_addr=MY_EMAIL, to_addrs=MY_EMAIL, msg=message.as_string())
-            print('Email was successfully sent.')
+            connection.login(os.environ.get('MAILTRAP_USERNAME'), os.environ.get('MAILTRAP_PASSWORD'))
+            if connection.sendmail(MY_EMAIL, MY_EMAIL, message.as_string()) == {}:
+                flash('Email was successfully sent.', 'success')
     except Exception as e:
-        print(f'Error sending email: {e}')
+        flash(f'Error sending email: {e}', 'warning')
 
 
 if __name__ == '__main__':
