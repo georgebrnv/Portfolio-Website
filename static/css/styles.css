@@ -11679,7 +11679,7 @@ html {
     padding: 60px 35px;
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .column {
   border-right: unset;
   }
@@ -11737,6 +11737,7 @@ body { --bs-body-font-family: 'Rubik'; }
 }
 
 .box-column {
+    flex: 1;
     display: block;
     flex-basis: 0;
     flex-grow: 1;
@@ -11860,4 +11861,26 @@ body { --bs-body-font-family: 'Rubik'; }
 
 .message-text {
     white-space: pre-line;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.resume-header-text {
+        margin-bottom: 0;
+    }
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .dwnl-btn {
+        font-size: 14px !important;
+    }
+    .resume-header-text {
+        font-size: 20px !important;
+        margin-bottom: 0;
+    }
 }
