@@ -11890,3 +11890,7 @@ body { --bs-body-font-family: 'Rubik'; }
         align-items: center;
     }
 }
+
+.resume-box-text {
+    font-size: 14px;
+}
