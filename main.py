@@ -25,11 +25,13 @@ Bootstrap5(app)
 MY_EMAIL = "egor.barinov.us@gmail.com"
 GMAIL_APP_PASSWORD = os.environ.get('GMAIL_APP_PASS')
 
+how_old_am_i = datetime.today().year - datetime.strptime('March 1, 2001', '%B %d, %Y').year
+
 
 # Pass current_year variable to all HTML templates
 @app.context_processor
 def inject_current_year():
-    return dict(current_year=datetime.today().year)
+    return dict(current_year=datetime.today().year, how_old_am_i=how_old_am_i)
 
 
 @app.route('/', methods=['GET', 'POST'])

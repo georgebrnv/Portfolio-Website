@@ -594,7 +594,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {
@@ -798,10 +798,6 @@ progress {
 
 .offset-3 {
   margin-left: 25%;
-}
-
-.offset-4 {
-  margin-left: 33.33333333%;
 }
 
 .offset-5 {
@@ -1567,6 +1563,37 @@ progress {
   .gy-xl-5 {
     --bs-gutter-y: 3rem;
   }
+}
+
+/* Add this at the very end of your styles.css file */
+
+/* Sticky Footer Styles */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+/* Ensure the layout works properly on all screen sizes */
+.main-content {
+    flex: 1 0 auto;
+}
+
+.footer-content {
+    flex-shrink: 0;
 }
 @media (min-width: 1400px) {
   .col-xxl {
